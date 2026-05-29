@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { LessonStatus } from "@/lib/types";
 
 export function LessonActions({
@@ -16,6 +16,29 @@ export function LessonActions({
   const router = useRouter();
   const [status, setStatus] = useState<LessonStatus>(initialStatus);
   const [saving, setSaving] = useState(false);
+  const markedReadingRef = useRef(false);
+
+  // On first open of an unread lesson, mark it "reading". This runs from the
+  // client (calling the API route) because cookies/D1 writes can't happen
+  // during server render in Next.js 15.
+  useEffect(() => {
+    if (initialStatus !== "unread" || markedReadingRef.current) return;
+    markedReadingRef.current = true;
+    fetch("/api/progress", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ lessonId, status: "reading" }),
+    })
+      .then((res) => {
+        if (res.ok) {
+          setStatus("reading");
+          router.refresh();
+        }
+      })
+      .catch(() => {
+        /* best effort */
+      });
+  }, [initialStatus, lessonId, router]);
 
   async function update(next: LessonStatus) {
     setSaving(true);

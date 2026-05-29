@@ -4,8 +4,8 @@ import { CURRICULUM, getDomain } from "@/lib/curriculum";
 import { questionsForLesson } from "@/lib/questions";
 import { Markdown } from "@/components/Markdown";
 import { LessonActions } from "@/components/LessonActions";
-import { getOrCreateProfileId } from "@/lib/profile";
-import { getLessonProgress, setLessonStatus } from "@/lib/progress";
+import { peekProfileId } from "@/lib/profile";
+import { getLessonProgress } from "@/lib/progress";
 import type { LessonStatus } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
@@ -26,14 +26,15 @@ export default async function LessonPage({
 
   const lesson = domain.lessons[idx];
 
-  // Mark as "reading" on open (best effort), then read current status.
-  const profileId = await getOrCreateProfileId();
-  const existing = (await getLessonProgress(profileId)).find((p) => p.lesson_id === lessonId);
-  let status: LessonStatus = existing?.status ?? "unread";
-  if (status === "unread") {
-    await setLessonStatus(profileId, lessonId, "reading");
-    status = "reading";
-  }
+  // Read-only on the server: never mutate cookies during render (Next.js 15
+  // throws if you do). The profile cookie is created lazily by the API routes
+  // (/api/progress, /api/grade) on the first write. We mark the lesson as
+  // "reading" from the client after mount via LessonActions.
+  const profileId = await peekProfileId();
+  const existing = profileId
+    ? (await getLessonProgress(profileId)).find((p) => p.lesson_id === lessonId)
+    : undefined;
+  const status: LessonStatus = existing?.status ?? "unread";
 
   const next = domain.lessons[idx + 1];
   const nextHref = next ? `/curriculum/${domain.id}/${next.id}` : null;
