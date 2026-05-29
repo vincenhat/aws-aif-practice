@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CURRICULUM, getDomain } from "@/lib/curriculum";
-import { questionsForDomain } from "@/lib/questions";
+import { questionsForDomain, setsForDomain } from "@/lib/questions";
 import { peekProfileId } from "@/lib/profile";
 import { getLessonProgress } from "@/lib/progress";
 
@@ -24,6 +24,7 @@ export default async function DomainPage({
   const progress = profileId ? await getLessonProgress(profileId) : [];
   const statusByLesson = new Map(progress.map((p) => [p.lesson_id, p.status]));
   const qCount = questionsForDomain(domain.id).length;
+  const setCount = setsForDomain(domain.id).length;
 
   return (
     <div className="space-y-8">
@@ -50,7 +51,7 @@ export default async function DomainPage({
             href={`/quiz/${domain.id}`}
             className="inline-block rounded-lg bg-aws-orange px-4 py-2 text-sm font-semibold text-aws-squid hover:brightness-110"
           >
-            Take domain quiz ({qCount} questions)
+            Take domain quizzes ({setCount} sets · {qCount} questions)
           </Link>
         </div>
       </header>

@@ -36,6 +36,8 @@ export interface Question {
   domainId: DomainId;
   /** Optional lesson this question maps to */
   lessonId?: string;
+  /** Practice set number within the domain (1, 2, 3). Defaults to 1 if omitted. */
+  set?: number;
   type: "single" | "multi";
   prompt: string;
   options: string[];

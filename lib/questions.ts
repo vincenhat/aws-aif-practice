@@ -508,11 +508,1051 @@ export const QUESTIONS: Question[] = [
     explanation:
       "Bedrock Model Invocation Logging captures model inputs (prompts) and outputs (responses) to S3/CloudWatch for audit.",
   },
+
+  // ================================================================
+  // SET 2 — fresh questions for every domain
+  // ================================================================
+
+  // ---------------- Domain 1: AI & ML Fundamentals (Set 2) ----------------
+  {
+    id: "q-d1-s2-001",
+    domainId: "d1-ai-ml-fundamentals",
+    lessonId: "l1-1-ai-ml-dl-genai",
+    set: 2,
+    type: "single",
+    prompt:
+      "A hand-coded system uses fixed 'if-then' rules to route support tickets, with no learning from data. How is this best classified?",
+    options: [
+      "Machine learning",
+      "Deep learning",
+      "AI but not machine learning",
+      "Generative AI",
+    ],
+    answer: [2],
+    explanation:
+      "Rule-based expert systems are AI, but because they do not learn patterns from data they are not machine learning.",
+  },
+  {
+    id: "q-d1-s2-002",
+    domainId: "d1-ai-ml-fundamentals",
+    lessonId: "l1-2-ml-types",
+    set: 2,
+    type: "single",
+    prompt:
+      "An autonomous warehouse robot learns to navigate by receiving positive reward for reaching the dock and penalties for collisions. Which learning type is this?",
+    options: ["Supervised learning", "Reinforcement learning", "Unsupervised learning", "Semi-supervised learning"],
+    answer: [1],
+    explanation:
+      "An agent learning from rewards and penalties through interaction with an environment is reinforcement learning.",
+  },
+  {
+    id: "q-d1-s2-003",
+    domainId: "d1-ai-ml-fundamentals",
+    lessonId: "l1-4-metrics",
+    set: 2,
+    type: "single",
+    prompt:
+      "You are predicting next month's electricity demand (a continuous value). Which metric is appropriate to evaluate the model?",
+    options: ["Precision", "RMSE", "F1 score", "AUC-ROC"],
+    answer: [1],
+    explanation:
+      "RMSE is a regression metric for continuous targets. Precision, F1, and AUC-ROC are classification metrics.",
+  },
+  {
+    id: "q-d1-s2-004",
+    domainId: "d1-ai-ml-fundamentals",
+    lessonId: "l1-3-ml-lifecycle",
+    set: 2,
+    type: "single",
+    prompt:
+      "A team wants a central, reusable repository of curated features shared across multiple models. Which AWS capability fits?",
+    options: [
+      "Amazon SageMaker Feature Store",
+      "Amazon SageMaker Model Monitor",
+      "Amazon Rekognition",
+      "AWS Glue DataBrew",
+    ],
+    answer: [0],
+    explanation:
+      "SageMaker Feature Store stores, shares, and reuses curated ML features across teams and models.",
+  },
+  {
+    id: "q-d1-s2-005",
+    domainId: "d1-ai-ml-fundamentals",
+    lessonId: "l1-5-aws-ai-services",
+    set: 2,
+    type: "single",
+    prompt:
+      "A call center wants to convert recorded customer phone calls into written transcripts. Which AWS service is the best fit?",
+    options: ["Amazon Polly", "Amazon Transcribe", "Amazon Comprehend", "Amazon Translate"],
+    answer: [1],
+    explanation:
+      "Amazon Transcribe performs speech-to-text. Polly is text-to-speech, Comprehend is NLP analysis, Translate is language translation.",
+  },
+  {
+    id: "q-d1-s2-006",
+    domainId: "d1-ai-ml-fundamentals",
+    lessonId: "l1-3-ml-lifecycle",
+    set: 2,
+    type: "single",
+    prompt:
+      "A model performs poorly on both training and validation data. What does this most likely indicate?",
+    options: ["Overfitting", "Underfitting", "Data leakage", "Perfect generalization"],
+    answer: [1],
+    explanation:
+      "Poor performance on both training and validation sets indicates underfitting — the model is too simple to capture the patterns.",
+  },
+  {
+    id: "q-d1-s2-007",
+    domainId: "d1-ai-ml-fundamentals",
+    lessonId: "l1-5-aws-ai-services",
+    set: 2,
+    type: "multi",
+    prompt:
+      "Which TWO tasks can Amazon Rekognition perform out of the box? (Choose two.)",
+    options: [
+      "Detect objects and scenes in images",
+      "Forecast future sales from time-series data",
+      "Moderate inappropriate image/video content",
+      "Translate documents between languages",
+      "Generate speech audio from text",
+    ],
+    answer: [0, 2],
+    explanation:
+      "Rekognition analyzes images and video (object/scene detection, content moderation, faces). Forecasting, translation, and TTS are other services.",
+  },
+
+  // ---------------- Domain 2: Generative AI (Set 2) ----------------
+  {
+    id: "q-d2-s2-001",
+    domainId: "d2-generative-ai",
+    lessonId: "l2-1-foundation-models",
+    set: 2,
+    type: "single",
+    prompt:
+      "Which architecture, based on a self-attention mechanism, underlies most modern large language models?",
+    options: ["Convolutional neural network", "Transformer", "Decision tree", "Recurrent rule engine"],
+    answer: [1],
+    explanation:
+      "Transformers use self-attention to weigh relationships between tokens and are the foundation of modern LLMs.",
+  },
+  {
+    id: "q-d2-s2-002",
+    domainId: "d2-generative-ai",
+    lessonId: "l2-2-tokens-embeddings",
+    set: 2,
+    type: "single",
+    prompt:
+      "Approximately how many English words correspond to 1,000 tokens?",
+    options: ["About 250 words", "About 750 words", "About 2,000 words", "Exactly 1,000 words"],
+    answer: [1],
+    explanation:
+      "A common rule of thumb is 1 token ≈ 0.75 words, so 1,000 tokens ≈ 750 words.",
+  },
+  {
+    id: "q-d2-s2-003",
+    domainId: "d2-generative-ai",
+    lessonId: "l2-3-prompt-engineering",
+    set: 2,
+    type: "single",
+    prompt:
+      "A malicious user types instructions into a chat input to override the system prompt and reveal hidden rules. What is this attack called?",
+    options: ["Prompt injection", "Model drift", "Overfitting", "Tokenization"],
+    answer: [0],
+    explanation:
+      "Prompt injection manipulates model behavior by inserting adversarial instructions into the input.",
+  },
+  {
+    id: "q-d2-s2-004",
+    domainId: "d2-generative-ai",
+    lessonId: "l2-3-prompt-engineering",
+    set: 2,
+    type: "single",
+    prompt:
+      "For a complex multi-step reasoning task, which prompting technique typically improves answer quality?",
+    options: [
+      "Asking the model to think step by step (chain-of-thought)",
+      "Setting temperature to its maximum",
+      "Removing all context from the prompt",
+      "Requesting the shortest possible answer",
+    ],
+    answer: [0],
+    explanation:
+      "Chain-of-thought prompting encourages intermediate reasoning steps, improving performance on complex tasks.",
+  },
+  {
+    id: "q-d2-s2-005",
+    domainId: "d2-generative-ai",
+    lessonId: "l2-5-aws-genai-stack",
+    set: 2,
+    type: "single",
+    prompt:
+      "A non-technical employee wants to experiment with building a small generative AI app with no code, to learn the concepts. Which AWS offering fits best?",
+    options: ["PartyRock", "Amazon EC2", "AWS Lambda", "Amazon Redshift"],
+    answer: [0],
+    explanation:
+      "PartyRock is a no-code playground (built on Bedrock) for building and sharing generative AI apps and learning.",
+  },
+  {
+    id: "q-d2-s2-006",
+    domainId: "d2-generative-ai",
+    lessonId: "l2-4-genai-use-cases",
+    set: 2,
+    type: "single",
+    prompt:
+      "Which task is a POOR fit for a generative large language model on its own?",
+    options: [
+      "Drafting a product description",
+      "Summarizing a long article",
+      "Performing guaranteed-exact arithmetic on large numbers",
+      "Brainstorming marketing slogans",
+    ],
+    answer: [2],
+    explanation:
+      "LLMs are probabilistic and can make arithmetic errors; exact calculation is better handled by deterministic code or tools.",
+  },
+  {
+    id: "q-d2-s2-007",
+    domainId: "d2-generative-ai",
+    lessonId: "l2-2-tokens-embeddings",
+    set: 2,
+    type: "single",
+    prompt:
+      "Which Amazon Bedrock model family is designed to generate text embeddings for semantic search?",
+    options: ["Amazon Titan Embeddings", "Amazon Polly", "Stable Diffusion", "Amazon Textract"],
+    answer: [0],
+    explanation:
+      "Amazon Titan Embeddings (on Bedrock) converts text into vectors for semantic search and RAG. Polly/Textract are not embedding models.",
+  },
+
+  // ---------------- Domain 3: Applications of Foundation Models (Set 2) ----------------
+  {
+    id: "q-d3-s2-001",
+    domainId: "d3-foundation-models",
+    lessonId: "l3-2-customization-spectrum",
+    set: 2,
+    type: "single",
+    prompt:
+      "A model lacks deep vocabulary for a highly specialized legal domain and must absorb large volumes of unlabeled legal text. Which approach adds this domain knowledge?",
+    options: ["Prompt engineering", "Continued pre-training", "Reducing temperature", "Increasing max tokens"],
+    answer: [1],
+    explanation:
+      "Continued pre-training on large unlabeled domain corpora adds domain knowledge; it is the most resource-intensive option.",
+  },
+  {
+    id: "q-d3-s2-002",
+    domainId: "d3-foundation-models",
+    lessonId: "l3-1-selecting-models",
+    set: 2,
+    type: "single",
+    prompt:
+      "To objectively compare several foundation models on your own dataset before choosing one, which Bedrock feature should you use?",
+    options: [
+      "Bedrock Model Evaluation",
+      "Bedrock Guardrails",
+      "Bedrock Agents",
+      "Bedrock Provisioned Throughput",
+    ],
+    answer: [0],
+    explanation:
+      "Bedrock Model Evaluation supports automatic and human evaluation to compare models on your data and tasks.",
+  },
+  {
+    id: "q-d3-s2-003",
+    domainId: "d3-foundation-models",
+    lessonId: "l3-3-rag",
+    set: 2,
+    type: "single",
+    prompt:
+      "In a RAG pipeline, what is stored in the vector database during the ingestion phase?",
+    options: [
+      "The raw model weights",
+      "Embeddings (vector representations) of document chunks",
+      "The user's final answers",
+      "Billing records",
+    ],
+    answer: [1],
+    explanation:
+      "Ingestion splits documents into chunks, generates embeddings, and stores those vectors for similarity retrieval at query time.",
+  },
+  {
+    id: "q-d3-s2-004",
+    domainId: "d3-foundation-models",
+    lessonId: "l3-4-agents",
+    set: 2,
+    type: "single",
+    prompt:
+      "Bedrock Agents commonly invoke which AWS service to execute the business logic behind an action group?",
+    options: ["AWS Lambda", "Amazon Polly", "Amazon Macie", "AWS Artifact"],
+    answer: [0],
+    explanation:
+      "Action groups are typically backed by AWS Lambda functions that perform the actual API calls or logic.",
+  },
+  {
+    id: "q-d3-s2-005",
+    domainId: "d3-foundation-models",
+    lessonId: "l3-5-evaluation-guardrails",
+    set: 2,
+    type: "single",
+    prompt:
+      "Which metric is most appropriate for evaluating machine translation quality?",
+    options: ["BLEU", "ROUGE", "RMSE", "Silhouette score"],
+    answer: [0],
+    explanation:
+      "BLEU is the standard metric for translation quality; ROUGE targets summarization.",
+  },
+  {
+    id: "q-d3-s2-006",
+    domainId: "d3-foundation-models",
+    lessonId: "l3-2-customization-spectrum",
+    set: 2,
+    type: "single",
+    prompt:
+      "Which customization approach should you try FIRST because it is the cheapest and fastest to iterate on?",
+    options: ["Continued pre-training", "Fine-tuning", "Prompt engineering", "Training a model from scratch"],
+    answer: [2],
+    explanation:
+      "Prompt engineering changes only the prompt, requires no training, and should be attempted before costlier options.",
+  },
+  {
+    id: "q-d3-s2-007",
+    domainId: "d3-foundation-models",
+    lessonId: "l3-3-rag",
+    set: 2,
+    type: "multi",
+    prompt:
+      "Which TWO benefits does RAG provide compared with relying on a base model alone? (Choose two.)",
+    options: [
+      "Answers can reflect current, proprietary data without retraining",
+      "It permanently changes the model's weights",
+      "It can provide source citations for grounding",
+      "It eliminates all inference cost",
+      "It guarantees the model never makes mistakes",
+    ],
+    answer: [0, 2],
+    explanation:
+      "RAG injects fresh/proprietary context at query time and enables citations. It does not change weights, remove cost, or guarantee correctness.",
+  },
+
+  // ---------------- Domain 4: Responsible AI (Set 2) ----------------
+  {
+    id: "q-d4-s2-001",
+    domainId: "d4-responsible-ai",
+    lessonId: "l4-3-explainability-transparency",
+    set: 2,
+    type: "single",
+    prompt:
+      "Which explainability technique attributes a model's prediction to the contribution of each input feature?",
+    options: ["SHAP feature attribution", "Data sharding", "Token batching", "Gradient clipping"],
+    answer: [0],
+    explanation:
+      "SHAP values quantify each feature's contribution to a prediction and are available via SageMaker Clarify.",
+  },
+  {
+    id: "q-d4-s2-002",
+    domainId: "d4-responsible-ai",
+    lessonId: "l4-1-dimensions",
+    set: 2,
+    type: "single",
+    prompt:
+      "A hiring model consistently scores one gender lower despite equal qualifications. Which responsible-AI dimension is violated?",
+    options: ["Fairness", "Latency", "Scalability", "Throughput"],
+    answer: [0],
+    explanation:
+      "Unequal treatment of demographic groups is a fairness/bias problem.",
+  },
+  {
+    id: "q-d4-s2-003",
+    domainId: "d4-responsible-ai",
+    lessonId: "l4-4-monitoring-genai-risks",
+    set: 2,
+    type: "single",
+    prompt:
+      "To reduce hallucinations in a generative chatbot, which approach is most effective?",
+    options: [
+      "Grounding answers in retrieved source data (RAG) with contextual grounding checks",
+      "Increasing the temperature parameter",
+      "Removing the system prompt",
+      "Disabling logging",
+    ],
+    answer: [0],
+    explanation:
+      "Grounding responses in retrieved, authoritative data (and grounding checks via Guardrails) reduces fabricated content.",
+  },
+  {
+    id: "q-d4-s2-004",
+    domainId: "d4-responsible-ai",
+    lessonId: "l4-2-bias-fairness",
+    set: 2,
+    type: "single",
+    prompt:
+      "At which stage of the ML lifecycle can bias be introduced?",
+    options: [
+      "Only during training",
+      "Only during deployment",
+      "Any stage — data collection, labeling, training, or feedback",
+      "Bias cannot be introduced once data is collected",
+    ],
+    answer: [2],
+    explanation:
+      "Bias can enter at any stage: unrepresentative data, subjective labels, modeling choices, or feedback loops in production.",
+  },
+  {
+    id: "q-d4-s2-005",
+    domainId: "d4-responsible-ai",
+    lessonId: "l4-1-dimensions",
+    set: 2,
+    type: "single",
+    prompt:
+      "Ensuring humans can monitor, intervene in, and steer an AI system reflects which responsible-AI principle?",
+    options: ["Controllability", "Tokenization", "Quantization", "Sharding"],
+    answer: [0],
+    explanation:
+      "Controllability is the ability for humans to oversee and direct an AI system's behavior.",
+  },
+  {
+    id: "q-d4-s2-006",
+    domainId: "d4-responsible-ai",
+    lessonId: "l4-3-explainability-transparency",
+    set: 2,
+    type: "single",
+    prompt:
+      "There is often a trade-off between a model's predictive accuracy and which other property?",
+    options: ["Interpretability", "Storage cost", "Region availability", "Token price"],
+    answer: [0],
+    explanation:
+      "Highly accurate models (deep nets) are often less interpretable than simpler models — a common accuracy/interpretability trade-off.",
+  },
+
+  // ---------------- Domain 5: Security, Compliance & Governance (Set 2) ----------------
+  {
+    id: "q-d5-s2-001",
+    domainId: "d5-security-governance",
+    lessonId: "l5-1-securing-ai",
+    set: 2,
+    type: "single",
+    prompt:
+      "Where should an application store the API keys and credentials it uses to call external services, instead of hardcoding them?",
+    options: ["AWS Secrets Manager", "A public S3 bucket", "The source code repository", "An environment variable in a public Docker image"],
+    answer: [0],
+    explanation:
+      "AWS Secrets Manager securely stores and rotates credentials; hardcoding or exposing secrets is a security risk.",
+  },
+  {
+    id: "q-d5-s2-002",
+    domainId: "d5-security-governance",
+    lessonId: "l5-2-data-governance-privacy",
+    set: 2,
+    type: "single",
+    prompt:
+      "A team must detect and redact personally identifiable information from free-text documents before processing. Which service is well suited?",
+    options: ["Amazon Comprehend (PII detection)", "Amazon Polly", "Amazon Lex", "AWS Budgets"],
+    answer: [0],
+    explanation:
+      "Amazon Comprehend can detect and redact PII entities in text. (Bedrock Guardrails can also redact PII in FM inputs/outputs.)",
+  },
+  {
+    id: "q-d5-s2-003",
+    domainId: "d5-security-governance",
+    lessonId: "l5-4-audit-governance",
+    set: 2,
+    type: "single",
+    prompt:
+      "An auditor needs to confirm whether resource configurations have drifted from a compliant baseline over time. Which service provides this?",
+    options: ["AWS Config", "Amazon CloudFront", "Amazon SQS", "AWS Amplify"],
+    answer: [0],
+    explanation:
+      "AWS Config tracks resource configuration history and evaluates compliance against rules over time.",
+  },
+  {
+    id: "q-d5-s2-004",
+    domainId: "d5-security-governance",
+    lessonId: "l5-3-shared-responsibility-compliance",
+    set: 2,
+    type: "single",
+    prompt:
+      "Under the shared responsibility model, who is responsible for the security and patching of the physical infrastructure running Amazon Bedrock?",
+    options: ["AWS", "The customer", "A third-party auditor", "The end user"],
+    answer: [0],
+    explanation:
+      "AWS is responsible for security OF the cloud, including physical infrastructure and managed-service patching.",
+  },
+  {
+    id: "q-d5-s2-005",
+    domainId: "d5-security-governance",
+    lessonId: "l5-1-securing-ai",
+    set: 2,
+    type: "single",
+    prompt:
+      "Which practice best protects training data stored in Amazon S3 from accidental public exposure?",
+    options: [
+      "Enable S3 Block Public Access and restrictive bucket policies",
+      "Make the bucket public for convenience",
+      "Disable encryption to simplify access",
+      "Share the bucket URL widely",
+    ],
+    answer: [0],
+    explanation:
+      "S3 Block Public Access plus least-privilege bucket policies prevent unintended public exposure of sensitive data.",
+  },
+  {
+    id: "q-d5-s2-006",
+    domainId: "d5-security-governance",
+    lessonId: "l5-2-data-governance-privacy",
+    set: 2,
+    type: "single",
+    prompt:
+      "What does 'data residency' refer to in an AI governance context?",
+    options: [
+      "The geographic region where data is stored and processed",
+      "The number of copies of the data",
+      "The file format of the dataset",
+      "The model's parameter count",
+    ],
+    answer: [0],
+    explanation:
+      "Data residency concerns the geographic/jurisdictional location where data is stored and processed, important for compliance.",
+  },
+
+  // ================================================================
+  // SET 3 — fresh questions for every domain
+  // ================================================================
+
+  // ---------------- Domain 1: AI & ML Fundamentals (Set 3) ----------------
+  {
+    id: "q-d1-s3-001",
+    domainId: "d1-ai-ml-fundamentals",
+    lessonId: "l1-1-ai-ml-dl-genai",
+    set: 3,
+    type: "single",
+    prompt:
+      "Which statement correctly orders the concepts from broadest to narrowest?",
+    options: [
+      "Generative AI > Deep Learning > Machine Learning > AI",
+      "AI > Machine Learning > Deep Learning > Generative AI",
+      "Machine Learning > AI > Deep Learning > Generative AI",
+      "Deep Learning > AI > Generative AI > Machine Learning",
+    ],
+    answer: [1],
+    explanation:
+      "AI is the broadest field, ML is a subset of AI, deep learning a subset of ML, and generative AI a subset of deep learning.",
+  },
+  {
+    id: "q-d1-s3-002",
+    domainId: "d1-ai-ml-fundamentals",
+    lessonId: "l1-2-ml-types",
+    set: 3,
+    type: "single",
+    prompt:
+      "A dataset has a small amount of labeled data and a large amount of unlabeled data used together to train a model. This is known as:",
+    options: ["Supervised learning", "Semi-supervised learning", "Reinforcement learning", "Transfer learning"],
+    answer: [1],
+    explanation:
+      "Semi-supervised learning combines a small labeled set with a larger unlabeled set.",
+  },
+  {
+    id: "q-d1-s3-003",
+    domainId: "d1-ai-ml-fundamentals",
+    lessonId: "l1-4-metrics",
+    set: 3,
+    type: "single",
+    prompt:
+      "On a highly imbalanced fraud dataset (0.1% fraud), why can accuracy be misleading?",
+    options: [
+      "A model predicting 'never fraud' scores ~99.9% accuracy while catching no fraud",
+      "Accuracy cannot be computed on imbalanced data",
+      "Accuracy always equals recall",
+      "Accuracy is only valid for regression",
+    ],
+    answer: [0],
+    explanation:
+      "With extreme imbalance, always predicting the majority class yields high accuracy but zero useful detection; use precision/recall/F1.",
+  },
+  {
+    id: "q-d1-s3-004",
+    domainId: "d1-ai-ml-fundamentals",
+    lessonId: "l1-5-aws-ai-services",
+    set: 3,
+    type: "single",
+    prompt:
+      "An analyst with no coding experience wants to build and evaluate ML models through a visual, no-code interface. Which tool fits?",
+    options: ["Amazon SageMaker Canvas", "Amazon EC2", "AWS CloudFormation", "Amazon Athena"],
+    answer: [0],
+    explanation:
+      "SageMaker Canvas provides a no-code, visual interface for building ML models without writing code.",
+  },
+  {
+    id: "q-d1-s3-005",
+    domainId: "d1-ai-ml-fundamentals",
+    lessonId: "l1-5-aws-ai-services",
+    set: 3,
+    type: "single",
+    prompt:
+      "An e-commerce site wants real-time, personalized product recommendations for each shopper. Which AWS service is purpose-built for this?",
+    options: ["Amazon Personalize", "Amazon Forecast", "Amazon Textract", "Amazon Translate"],
+    answer: [0],
+    explanation:
+      "Amazon Personalize delivers real-time personalized recommendations using the same technology as Amazon.com.",
+  },
+  {
+    id: "q-d1-s3-006",
+    domainId: "d1-ai-ml-fundamentals",
+    lessonId: "l1-3-ml-lifecycle",
+    set: 3,
+    type: "single",
+    prompt:
+      "Which technique helps reduce overfitting during model training?",
+    options: [
+      "Adding regularization or more training data",
+      "Memorizing the training set",
+      "Removing the validation set",
+      "Increasing model complexity indefinitely",
+    ],
+    answer: [0],
+    explanation:
+      "Regularization, more/diverse data, and simpler models reduce overfitting and improve generalization.",
+  },
+  {
+    id: "q-d1-s3-007",
+    domainId: "d1-ai-ml-fundamentals",
+    lessonId: "l1-5-aws-ai-services",
+    set: 3,
+    type: "multi",
+    prompt:
+      "Which TWO are pre-trained AWS AI services that require no model building? (Choose two.)",
+    options: [
+      "Amazon Comprehend",
+      "Amazon SageMaker training jobs",
+      "Amazon Textract",
+      "Writing a custom PyTorch model",
+      "Provisioning an EC2 GPU cluster",
+    ],
+    answer: [0, 2],
+    explanation:
+      "Comprehend and Textract are managed, pre-trained AI services consumed via API. The others involve building/training your own models.",
+  },
+
+  // ---------------- Domain 2: Generative AI (Set 3) ----------------
+  {
+    id: "q-d2-s3-001",
+    domainId: "d2-generative-ai",
+    lessonId: "l2-1-foundation-models",
+    set: 3,
+    type: "single",
+    prompt:
+      "A model that can accept both text and images as input and reason over them is described as:",
+    options: ["Unimodal", "Multimodal", "Deterministic", "Stateless"],
+    answer: [1],
+    explanation:
+      "Multimodal models handle multiple input/output types such as text and images together.",
+  },
+  {
+    id: "q-d2-s3-002",
+    domainId: "d2-generative-ai",
+    lessonId: "l2-3-prompt-engineering",
+    set: 3,
+    type: "single",
+    prompt:
+      "Which inference parameter most directly controls the maximum length of a model's response?",
+    options: ["Temperature", "Top-p", "Max tokens", "Top-k"],
+    answer: [2],
+    explanation:
+      "Max tokens caps the number of tokens generated, limiting response length. Temperature/top-p/top-k affect randomness/sampling.",
+  },
+  {
+    id: "q-d2-s3-003",
+    domainId: "d2-generative-ai",
+    lessonId: "l2-1-foundation-models",
+    set: 3,
+    type: "single",
+    prompt:
+      "Which of the following is a foundation model family developed by AWS and available on Amazon Bedrock?",
+    options: ["Amazon Titan / Nova", "Google Gemini", "OpenAI GPT-4", "Microsoft Phi"],
+    answer: [0],
+    explanation:
+      "Amazon Titan and the Amazon Nova family are AWS-built foundation models offered on Bedrock.",
+  },
+  {
+    id: "q-d2-s3-004",
+    domainId: "d2-generative-ai",
+    lessonId: "l2-5-aws-genai-stack",
+    set: 3,
+    type: "single",
+    prompt:
+      "An enterprise wants an AI assistant that can answer employee questions grounded in internal wikis, documents, and tickets. Which service is purpose-built?",
+    options: ["Amazon Q Business", "Amazon Q Developer", "Amazon Rekognition", "Amazon Polly"],
+    answer: [0],
+    explanation:
+      "Amazon Q Business is a generative AI assistant that connects to and answers over enterprise data sources.",
+  },
+  {
+    id: "q-d2-s3-005",
+    domainId: "d2-generative-ai",
+    lessonId: "l2-4-genai-use-cases",
+    set: 3,
+    type: "single",
+    prompt:
+      "Why might the same prompt produce different responses on different runs of an LLM?",
+    options: [
+      "Generative models are non-deterministic due to probabilistic sampling",
+      "The model is broken",
+      "The internet connection changes the answer",
+      "Embeddings are disabled",
+    ],
+    answer: [0],
+    explanation:
+      "LLMs sample from probability distributions, so outputs can vary (especially at higher temperature) — they are non-deterministic.",
+  },
+  {
+    id: "q-d2-s3-006",
+    domainId: "d2-generative-ai",
+    lessonId: "l2-5-aws-genai-stack",
+    set: 3,
+    type: "single",
+    prompt:
+      "Which deployment characteristic best describes Amazon Bedrock?",
+    options: [
+      "Serverless — no infrastructure to provision to call foundation models",
+      "Requires managing your own GPU clusters",
+      "Only available on-premises",
+      "Requires training a model before any inference",
+    ],
+    answer: [0],
+    explanation:
+      "Bedrock is fully managed and serverless; you call FMs via API without provisioning infrastructure.",
+  },
+  {
+    id: "q-d2-s3-007",
+    domainId: "d2-generative-ai",
+    lessonId: "l2-4-genai-use-cases",
+    set: 3,
+    type: "multi",
+    prompt:
+      "Which TWO are strong, well-suited use cases for generative AI? (Choose two.)",
+    options: [
+      "Summarizing long support transcripts",
+      "Generating draft code from a description",
+      "Computing a bank's exact end-of-day ledger totals",
+      "Storing relational transactions with ACID guarantees",
+      "Serving as the system of record for payroll",
+    ],
+    answer: [0, 1],
+    explanation:
+      "Summarization and code drafting are strong generative use cases. Exact accounting and systems of record need deterministic systems.",
+  },
+
+  // ---------------- Domain 3: Applications of Foundation Models (Set 3) ----------------
+  {
+    id: "q-d3-s3-001",
+    domainId: "d3-foundation-models",
+    lessonId: "l3-1-selecting-models",
+    set: 3,
+    type: "single",
+    prompt:
+      "A workload must process very long documents in a single request. Which model attribute matters most when selecting an FM?",
+    options: ["A large context window", "A small parameter count", "The vendor's logo", "The console theme"],
+    answer: [0],
+    explanation:
+      "A larger context window allows more input tokens to be processed in one request, important for long documents.",
+  },
+  {
+    id: "q-d3-s3-002",
+    domainId: "d3-foundation-models",
+    lessonId: "l3-3-rag",
+    set: 3,
+    type: "single",
+    prompt:
+      "Which AWS service offers a managed RAG experience by connecting a data source (e.g., S3) to a vector store and wiring up retrieval automatically?",
+    options: [
+      "Amazon Bedrock Knowledge Bases",
+      "Amazon Polly",
+      "AWS CloudTrail",
+      "Amazon SNS",
+    ],
+    answer: [0],
+    explanation:
+      "Bedrock Knowledge Bases provide managed RAG: ingestion, embedding, vector storage, and retrieval orchestration.",
+  },
+  {
+    id: "q-d3-s3-003",
+    domainId: "d3-foundation-models",
+    lessonId: "l3-2-customization-spectrum",
+    set: 3,
+    type: "single",
+    prompt:
+      "Fine-tuning a foundation model requires which kind of data?",
+    options: [
+      "Labeled examples of the desired inputs and outputs",
+      "Only unlabeled raw text",
+      "No data at all",
+      "A larger context window",
+    ],
+    answer: [0],
+    explanation:
+      "Fine-tuning uses labeled input/output examples to adjust the model's behavior; continued pre-training uses unlabeled data.",
+  },
+  {
+    id: "q-d3-s3-004",
+    domainId: "d3-foundation-models",
+    lessonId: "l3-4-agents",
+    set: 3,
+    type: "single",
+    prompt:
+      "A solution must interpret a goal, decide which tools to call, and chain multiple steps to complete a task. Which capability is this?",
+    options: ["Agent orchestration", "Embedding generation", "Tokenization", "Quantization"],
+    answer: [0],
+    explanation:
+      "Orchestration — planning and chaining tool calls to fulfill a goal — is the core function of an agent.",
+  },
+  {
+    id: "q-d3-s3-005",
+    domainId: "d3-foundation-models",
+    lessonId: "l3-5-evaluation-guardrails",
+    set: 3,
+    type: "single",
+    prompt:
+      "When automated metrics are insufficient to judge helpfulness and tone of generated text, what should be added to the evaluation?",
+    options: ["Human evaluation", "More tokens", "A larger batch size", "Lower temperature only"],
+    answer: [0],
+    explanation:
+      "Human evaluation captures qualities like helpfulness, relevance, and tone that automatic metrics miss.",
+  },
+  {
+    id: "q-d3-s3-006",
+    domainId: "d3-foundation-models",
+    lessonId: "l3-1-selecting-models",
+    set: 3,
+    type: "single",
+    prompt:
+      "To reduce cost and latency while still meeting quality needs, a good general strategy is to:",
+    options: [
+      "Start with the smallest model that meets quality needs and scale up only if necessary",
+      "Always choose the largest available model",
+      "Disable all guardrails",
+      "Maximize the temperature",
+    ],
+    answer: [0],
+    explanation:
+      "Right-sizing — starting small and scaling only when needed — controls cost and latency without over-provisioning.",
+  },
+  {
+    id: "q-d3-s3-007",
+    domainId: "d3-foundation-models",
+    lessonId: "l3-2-customization-spectrum",
+    set: 3,
+    type: "multi",
+    prompt:
+      "Which TWO situations point toward RAG rather than fine-tuning? (Choose two.)",
+    options: [
+      "Answers must reflect documents that change frequently",
+      "You need responses grounded with citations to source material",
+      "You want to permanently bake a fixed writing style into the model",
+      "You must teach the model an entirely new language's grammar",
+      "You want to change the model's core token vocabulary",
+    ],
+    answer: [0, 1],
+    explanation:
+      "RAG suits frequently-changing data and citation/grounding needs. Style baking and deep language/vocabulary changes lean toward fine-tuning or pre-training.",
+  },
+
+  // ---------------- Domain 4: Responsible AI (Set 3) ----------------
+  {
+    id: "q-d4-s3-001",
+    domainId: "d4-responsible-ai",
+    lessonId: "l4-2-bias-fairness",
+    set: 3,
+    type: "single",
+    prompt:
+      "Training data collected only from one region's users causes a model to underperform for other regions. This is an example of:",
+    options: ["Sampling bias", "Concept drift", "Overprovisioning", "Latency"],
+    answer: [0],
+    explanation:
+      "Non-representative data collection introduces sampling bias, hurting fairness and generalization.",
+  },
+  {
+    id: "q-d4-s3-002",
+    domainId: "d4-responsible-ai",
+    lessonId: "l4-3-explainability-transparency",
+    set: 3,
+    type: "single",
+    prompt:
+      "Which AWS resource publishes intended use cases, limitations, and responsible-use guidance for an AWS-managed AI service?",
+    options: ["AWS AI Service Cards", "AWS Cost Explorer", "Amazon CloudWatch", "AWS Step Functions"],
+    answer: [0],
+    explanation:
+      "AI Service Cards document intended use, limitations, and responsible-use considerations for AWS AI services.",
+  },
+  {
+    id: "q-d4-s3-003",
+    domainId: "d4-responsible-ai",
+    lessonId: "l4-1-dimensions",
+    set: 3,
+    type: "single",
+    prompt:
+      "Being open about an AI system's capabilities, limitations, and how it was built reflects which principle?",
+    options: ["Transparency", "Throughput", "Elasticity", "Sharding"],
+    answer: [0],
+    explanation:
+      "Transparency is openness about capabilities, limits, and design — supported by tools like Service Cards and Model Cards.",
+  },
+  {
+    id: "q-d4-s3-004",
+    domainId: "d4-responsible-ai",
+    lessonId: "l4-4-monitoring-genai-risks",
+    set: 3,
+    type: "single",
+    prompt:
+      "Which tool helps detect data and concept drift on a deployed model so teams can retrain when accuracy degrades?",
+    options: ["Amazon SageMaker Model Monitor", "Amazon Polly", "AWS Artifact", "Amazon Lex"],
+    answer: [0],
+    explanation:
+      "SageMaker Model Monitor detects drift and data-quality issues on live endpoints and can alert via CloudWatch.",
+  },
+  {
+    id: "q-d4-s3-005",
+    domainId: "d4-responsible-ai",
+    lessonId: "l4-2-bias-fairness",
+    set: 3,
+    type: "single",
+    prompt:
+      "Which AWS capability provides both pre-training bias detection and post-training explainability for ML models?",
+    options: ["Amazon SageMaker Clarify", "Amazon CloudFront", "AWS WAF", "Amazon Kinesis"],
+    answer: [0],
+    explanation:
+      "SageMaker Clarify detects bias across the lifecycle and explains predictions via feature attribution.",
+  },
+  {
+    id: "q-d4-s3-006",
+    domainId: "d4-responsible-ai",
+    lessonId: "l4-4-monitoring-genai-risks",
+    set: 3,
+    type: "single",
+    prompt:
+      "Which is a generative-AI-specific risk teams must manage?",
+    options: [
+      "Hallucinated, fabricated content presented as fact",
+      "Disk fragmentation",
+      "DNS caching",
+      "CSS specificity conflicts",
+    ],
+    answer: [0],
+    explanation:
+      "Hallucination — confident but false output — is a key generative AI risk, mitigated with grounding and guardrails.",
+  },
+
+  // ---------------- Domain 5: Security, Compliance & Governance (Set 3) ----------------
+  {
+    id: "q-d5-s3-001",
+    domainId: "d5-security-governance",
+    lessonId: "l5-4-audit-governance",
+    set: 3,
+    type: "single",
+    prompt:
+      "A security team needs a record of exactly which API calls were made, by whom, and when across the account. Which service provides this?",
+    options: ["AWS CloudTrail", "Amazon CloudWatch dashboards", "Amazon QuickSight", "AWS Glue"],
+    answer: [0],
+    explanation:
+      "CloudTrail records account API activity (who/what/when) for auditing and forensic analysis.",
+  },
+  {
+    id: "q-d5-s3-002",
+    domainId: "d5-security-governance",
+    lessonId: "l5-1-securing-ai",
+    set: 3,
+    type: "single",
+    prompt:
+      "Which approach keeps data encrypted in transit between a client and Amazon Bedrock?",
+    options: ["TLS (HTTPS)", "Plaintext HTTP", "Disabling certificates", "FTP"],
+    answer: [0],
+    explanation:
+      "TLS (HTTPS) encrypts data in transit; KMS handles encryption at rest.",
+  },
+  {
+    id: "q-d5-s3-003",
+    domainId: "d5-security-governance",
+    lessonId: "l5-3-shared-responsibility-compliance",
+    set: 3,
+    type: "single",
+    prompt:
+      "Using a HIPAA-eligible AWS service automatically makes your application HIPAA compliant. Is this true?",
+    options: [
+      "No — your configuration, controls, and processes also determine compliance",
+      "Yes — the service guarantees full compliance",
+      "Yes — compliance is entirely AWS's responsibility",
+      "No — HIPAA does not apply to cloud services",
+    ],
+    answer: [0],
+    explanation:
+      "Service eligibility is necessary but not sufficient; the customer must configure and operate it compliantly (shared responsibility).",
+  },
+  {
+    id: "q-d5-s3-004",
+    domainId: "d5-security-governance",
+    lessonId: "l5-1-securing-ai",
+    set: 3,
+    type: "single",
+    prompt:
+      "Which service manages encryption keys used to protect data at rest for SageMaker and Bedrock workloads?",
+    options: ["AWS KMS", "Amazon Route 53", "Amazon SQS", "AWS Step Functions"],
+    answer: [0],
+    explanation:
+      "AWS Key Management Service (KMS) creates and manages encryption keys for data-at-rest protection.",
+  },
+  {
+    id: "q-d5-s3-005",
+    domainId: "d5-security-governance",
+    lessonId: "l5-2-data-governance-privacy",
+    set: 3,
+    type: "single",
+    prompt:
+      "Tracking where data originated and how it has been transformed across a pipeline is known as:",
+    options: ["Data lineage", "Data masking", "Data sharding", "Data deduplication"],
+    answer: [0],
+    explanation:
+      "Data lineage records the origin and transformations of data, supporting governance and auditability.",
+  },
+  {
+    id: "q-d5-s3-006",
+    domainId: "d5-security-governance",
+    lessonId: "l5-4-audit-governance",
+    set: 3,
+    type: "single",
+    prompt:
+      "A governance policy requires retaining every prompt and completion sent to Bedrock for later review. What should be enabled?",
+    options: [
+      "Bedrock model invocation logging to S3/CloudWatch",
+      "Amazon Polly logging",
+      "VPC Flow Logs only",
+      "Disabling CloudTrail",
+    ],
+    answer: [0],
+    explanation:
+      "Bedrock model invocation logging captures prompts and responses to S3/CloudWatch for audit and review.",
+  },
 ];
 
 /** Helpers. */
 export function questionsForDomain(domainId: string) {
   return QUESTIONS.filter((q) => q.domainId === domainId);
+}
+
+/** A question's set number, defaulting to 1 when unspecified. */
+export function questionSet(q: Question): number {
+  return q.set ?? 1;
+}
+
+/** Questions for a specific practice set within a domain. */
+export function questionsForSet(domainId: string, set: number) {
+  return QUESTIONS.filter((q) => q.domainId === domainId && questionSet(q) === set);
+}
+
+/** Distinct set numbers available for a domain, sorted ascending. */
+export function setsForDomain(domainId: string): number[] {
+  const sets = new Set<number>();
+  for (const q of QUESTIONS) {
+    if (q.domainId === domainId) sets.add(questionSet(q));
+  }
+  return [...sets].sort((a, b) => a - b);
 }
 
 export function questionsForLesson(lessonId: string) {

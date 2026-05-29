@@ -89,7 +89,7 @@ export default function HomePage() {
         <h2 className="text-xl font-semibold text-white">How to practice</h2>
         <ol className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <Step n={1} title="Read a domain" body="Work through the lessons in order, mark each complete." />
-          <Step n={2} title="Quiz the domain" body="Take a domain quiz to check recall and see explanations." />
+          <Step n={2} title="Quiz the domain" body="Each domain has 3 practice sets with explanations after grading." />
           <Step n={3} title="Find weak areas" body="The Progress page surfaces low-scoring domains and questions." />
           <Step n={4} title="Mock exam" body="Take a timed 65-question mock and aim for 80%+ before the real test." />
         </ol>

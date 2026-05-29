@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { CURRICULUM } from "@/lib/curriculum";
-import { questionsForDomain } from "@/lib/questions";
+import { questionsForDomain, setsForDomain } from "@/lib/questions";
 
 export default function QuizIndexPage() {
   return (
@@ -19,6 +19,7 @@ export default function QuizIndexPage() {
       <div className="grid gap-4 md:grid-cols-2">
         {CURRICULUM.map((d) => {
           const count = questionsForDomain(d.id).length;
+          const setCount = setsForDomain(d.id).length;
           return (
             <Link
               key={d.id}
@@ -30,7 +31,7 @@ export default function QuizIndexPage() {
                   Domain {d.number} · {d.weight}%
                 </span>
                 <span className="rounded-full bg-white/5 px-2.5 py-0.5 text-xs text-slate-300">
-                  {count} questions
+                  {setCount} sets · {count} questions
                 </span>
               </div>
               <h2 className="mt-2 font-semibold text-white group-hover:text-aws-orange">{d.title}</h2>
