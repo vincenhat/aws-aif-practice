@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-slate-950 text-slate-100 antialiased;
+  background-image:
+    radial-gradient(60rem 60rem at 80% -10%, rgba(255, 153, 0, 0.08), transparent),
+    radial-gradient(50rem 50rem at -10% 20%, rgba(56, 189, 248, 0.06), transparent);
+  background-attachment: fixed;
+}
+
+/* Markdown / lesson prose */
+.prose-aif h2 {
+  @apply text-xl font-semibold text-white mt-8 mb-3;
+}
+.prose-aif h3 {
+  @apply text-base font-semibold text-aws-orange mt-6 mb-2;
+}
+.prose-aif p {
+  @apply text-slate-300 leading-relaxed my-3;
+}
+.prose-aif ul {
+  @apply list-disc pl-6 my-3 space-y-1 text-slate-300;
+}
+.prose-aif ol {
+  @apply list-decimal pl-6 my-3 space-y-1 text-slate-300;
+}
+.prose-aif strong {
+  @apply text-white font-semibold;
+}
+.prose-aif code {
+  @apply rounded bg-slate-800 px-1.5 py-0.5 text-sm text-amber-300 font-mono;
+}
+.prose-aif a {
+  @apply text-sky-400 underline underline-offset-2;
+}
+
+/* Thin scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-700 rounded-full;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
